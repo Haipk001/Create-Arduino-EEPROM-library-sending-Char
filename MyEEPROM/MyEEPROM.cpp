@@ -22,13 +22,13 @@
 	{
 		int newCharLen = EEPROM.read(addrOffset);
 		//char data[newCharLen + 1]; //could not return char array
-    	char *data = (char *) malloc (newCharLen + 1);
+    		char *data = (char *) malloc (newCharLen + 1);
 
 		for (int i = 0; i < newCharLen; i++)
 			{
 				data[i] = EEPROM.read(addrOffset + 1 + i);
 			}
-    	data[newCharLen] = '\0';
+    		data[newCharLen] = '\0';
 		return data;
 	}
 
